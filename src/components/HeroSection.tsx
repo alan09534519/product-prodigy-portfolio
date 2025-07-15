@@ -35,11 +35,19 @@ export const HeroSection = () => {
           </div>
           
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="group">
+            <Button 
+              size="lg" 
+              className="group"
+              onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View My Work
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" size="lg">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Let's Connect
             </Button>
           </div>

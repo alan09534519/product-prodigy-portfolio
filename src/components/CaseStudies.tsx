@@ -2,10 +2,13 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, BarChart3, Users, Target } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const CaseStudies = () => {
+  const navigate = useNavigate();
+  
   return (
-    <section className="py-16 bg-secondary/5">
+    <section id="case-studies" className="py-16 bg-secondary/5">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -52,7 +55,11 @@ export const CaseStudies = () => {
                 </div>
               </div>
               
-              <Button variant="outline" className="w-full group">
+              <Button 
+                variant="outline" 
+                className="w-full group"
+                onClick={() => navigate('/case-study/product-discovery')}
+              >
                 View Full Case Study
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
@@ -92,7 +99,11 @@ export const CaseStudies = () => {
                 </div>
               </div>
               
-              <Button variant="outline" className="w-full group">
+              <Button 
+                variant="outline" 
+                className="w-full group"
+                onClick={() => navigate('/case-study/analytics-implementation')}
+              >
                 View Full Case Study
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
